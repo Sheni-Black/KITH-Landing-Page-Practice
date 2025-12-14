@@ -1,0 +1,644 @@
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('Fontspring-DEMO-proximanova-medium.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'proxima-nova';
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.1) 70%), url('hero.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 17rem; */
+    padding: 1rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+   
+}
+
+.nav-bar .header{
+    background-color: rgba( 0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.3rem;
+    flex: 0 1 0;
+    text-align: center;
+    margin-left: center;
+    margin-right: center;
+    align-self: center;
+    letter-spacing: 2px;
+}
+
+.nav-bar .nav-icons{
+    flex: 0 1 9%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* margin-left: 18.5rem; */
+    margin-left: auto;
+}
+
+.nav-icons span{
+    font-weight: 200;
+}
+
+.nav-bar .nav-link{
+    flex: 0 1 27%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-end;
+    gap: 2rem;
+    margin-right: auto;
+    letter-spacing: 3px;
+}
+
+.nav-link a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba( 0, 0, 0, 0.7);
+}
+
+.hamburger{
+    display: none;
+}
+
+.hero-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    padding-inline: 2rem;
+}
+
+.content{
+    margin-right: auto;
+}
+
+.hero-content .content h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-content .content p{
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.hero-content .shop a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: 1px solid white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.hero-content .shop a:first-child{
+    margin-right: 1rem;
+}
+
+.adult-winter{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.adult{
+    width: 23%;
+    position: relative;
+}
+
+.adult-span{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    background-color: white;
+}
+
+.adult-span span{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.4rem;
+    font-weight: 300;
+}
+
+.adult img{
+   width: 100%;
+}
+
+.first-scroll{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+}
+
+.first-scroll .scroll-img{
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always normal;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.scroll-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-content-container{
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.1);
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    padding-inline: 2rem;
+}
+
+.scroll-content-container a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: 1px solid white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.scroll-content-container .scroll-content{
+    margin-right: auto;
+}
+
+.scroll-content h2{
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.scroll-content p{
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.scroll-content span{
+    display: inline-block;
+    padding-inline: 1rem;
+    border-left: 0.15rem solid white;
+}
+
+.product-price{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 3rem;
+    width: 10%;
+    align-self: center;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    color: rgba( 0, 0, 0, 0.8);
+    border: 1px solid rgba( 0, 0, 0, 0.8);
+
+}
+
+.product{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+}
+
+.price{
+    width: 20%;
+    height: 50%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always normal;
+    flex: 0 0 20%
+}
+
+.price p{
+    margin-top: 5rem;
+    font-size: 0.8rem;
+    color: rgba( 0, 0, 0, 0.8);
+}
+
+.price span{
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.product-img{
+    width: 100%;
+    position: relative;
+    aspect-ratio: 4/3;
+}
+
+.product-img img{
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.product-img img:last-child{
+    opacity: 0;
+}
+
+.product-img:hover img:last-child{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.winter-women{
+    background-image: url('Refresh1_Homepage_.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 1rem;
+    padding-inline: 2rem;
+}
+
+.women-winter{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* nested inside .women-winte  */
+
+.women-winter-content{
+    margin-right: auto;
+}
+
+.women-winter-link{
+    align-self: flex-end;
+    padding: 1rem;
+}
+
+.women-winter-content h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.women-winter-content p{
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.women-winter-link a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border: 1px solid white;
+    letter-spacing: 0.1rem;
+}
+
+.women-winter-link a:first-child{
+    margin-right: 1rem;
+}
+
+/* kids-winter for the section with kids pictures */
+
+.kids-winter{
+    background-image: url('Homepage_Desktop_5.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 1rem;
+    padding-inline: 2rem;
+
+}
+
+.event{
+    background-image: url('End event.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.event .end-event{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.end-event h2{
+    color: white;
+    margin-right: auto;
+    font-size: 1.7rem;
+}
+
+.end-event a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    font-size: 0.8rem;
+    border: 1px solid white;
+}
+
+.app{
+    background-image: url('KithApp_HP-.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.app a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: 1px solid white;
+}
+
+footer{
+    font-size: 0.7rem;
+    color: rgba( 0, 0, 0, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 2rem;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-content a{
+     color: rgba( 0, 0, 0, 0.8);
+}
+
+.footer-content input{
+    padding-inline: 0.9rem;
+    padding-block: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.footer-content label{
+    background-color: rgba( 0, 0, 0, 0.8);
+    padding-inline: 0.9rem;
+    padding-block: 0.9rem;
+    color: white;
+}
+
+@media  (max-width: 900px) {
+    .hero{
+        background-size: cover;
+        background-position: 70% 100%;
+    }
+
+    .nav-link{
+        margin-bottom: 1rem;
+    }
+
+    .nav-link a{
+        font-size: 0.5rem;
+    }
+
+    .hero-content{
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content .content{
+        margin: auto;
+        text-align: center;
+    }
+    .hero-content .content p{
+        margin-bottom: 2rem;
+    }
+
+    .adult{
+        flex: 0 0 45%;
+        margin-bottom: 1rem;
+    }
+
+    .scroll-content h2{
+        font-size: 1rem;
+    }
+
+    .scroll-content p{
+        font-size: 0.5rem;
+    }
+
+    .scroll-content-container a{
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .price{
+        flex: 0 0 70%;
+    }
+
+    .price p{
+        margin-top: 9rem;
+        text-align: center;
+    }
+
+    .product-price a{
+        width: 20%;
+    }
+
+    .winter-women{
+        background-size: cover;
+        background-position: 50% 100%;
+    }
+
+    .women-winter{
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .women-winter-content{
+        margin: auto;
+        text-align: center;
+    }
+
+    .kids-winter{
+        background-size: cover;
+        background-position: 50% 100%; 
+    }
+
+    .event{
+        background-size: cover;
+        background-position: 50% 100%;
+    }
+
+    .end-event{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .app{
+        background-size: cover;
+        background-position: 50% 100%; 
+    }
+
+}
+
+@media (max-width: 700px){
+    .price p{
+         margin-top: 6.5rem;
+    }
+
+    .product-price a{
+        width: 30%;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-bar .nav-link, .header{
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    .price p{
+        margin-top: 4rem;
+    }
+    
+    .product-price a{
+        width: 40%;
+    }
+    .women-winter-content h2{
+        font-size: 1.5rem;
+    }
+    .women-winter-content p{
+        font-size: 0.5rem;
+    }
+
+    .women-winter-link a{
+            padding: 0.5rem;
+        font-size: 0.5rem;
+    }
+
+        .end-event h2{
+        text-align: center;
+    }
+
+    .end-event a{
+        margin-top: 1rem;
+    }
+
+    .footer{
+       gap: 1rem;
+    }
+
+    .footer-link{
+        flex-basis: 40%;
+    }
+
+    .hero-content .content h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-content .content p{
+    font-size: 0.5rem;
+}
+
+.hero-content .shop a{
+    padding: 0.5rem;
+    font-size: 0.5rem;
+}
+
+}
